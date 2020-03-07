@@ -1,12 +1,38 @@
 <!-- Show Profile Information
     https://manage.auth0.com/dashboard/eu/dev-5ram9se8/applications/y7h2U6ePYBwzqMjE9xGokgoVi3Hiibdb/quickstart
  -->
-<h1>Perfil de usuario</h1>
-<hr>
+
 <!-- El símbolo $ de auth.userProfile$ indica que es un observable y por esto podemos utilizar el pipe "async" que nos deja el resultado en "profile". A continuación a profile se pasamos el pipe json para verlo mejor -->
 
-<pre *ngIf="auth.userProfile$ | async as profile">
+<!-- <pre *ngIf="auth.userProfile$ | async as profile">
 
-    <code>{{ profile | json }}</code>
-    
-</pre>
+    <code>{{ profile | json }}</code> -->
+<!-- <code>{{ usuarios | json }}</code> -->
+
+<!-- </pre> -->
+<div class="row">
+    <div class="col-12 mx-auto text-center">
+        <div class="card">
+            <img class="card-img-top img-fluid img-thumbnail rounded-circle" [src]="perfil.picture" alt="Card image cap" style="width: 18rem;">
+            <div class="card-body">
+                <h2 class="card-title">Perfil usuario</h2>
+                <p class="card-text">Aquí tienes los datos que tiene tu perfil.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">given_name : {{ perfil.given_name}} </li>
+                <li class="list-group-item">family_name : {{ perfil.family_name }}</li>
+                <li class="list-group-item">nickname : {{ perfil.nickname }}</li>
+                <li class="list-group-item">name : {{ perfil.name }} </li>
+                <li class="list-group-item">locale : {{ perfil.locale }}</li>
+                <li class="list-group-item">updated_at : {{ perfil.updated_at }}</li>
+                <li class="list-group-item">email : {{ perfil.email }} </li>
+                <li class="list-group-item">email_verified : {{ perfil.email_verified }}</li>
+                <li class="list-group-item">sub : {{ perfil.sub }}</li>
+            </ul>
+            <!-- <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div> -->
+        </div>
+    </div>
+</div>
