@@ -1,5 +1,7 @@
 # Authapp
 
+Small project to test  [Auth0](https://auth0.com).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
 ## Development server
@@ -25,3 +27,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+To install [Auth0] (https://manage.auth0.com/dashboard/eu/dev-5ram9se8/applications/y7h2U6ePYBwzqMjE9xGokgoVi3Hiibdb/quickstart):
+- npm install @auth0/auth0-spa-js --save
+- ng g s services/auth --skipTests 
+- ng g guard services/auth --skipTests 
+- ng g c components/protegida -is --skipTests
